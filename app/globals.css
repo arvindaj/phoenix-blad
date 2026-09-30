@@ -1,0 +1,6 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-obsidian text-warm font-body antialiased overflow-x-hidden}
+:focus-visible{outline:2px solid #FF5A1F;outline-offset:3px}
+.gold-text{background:linear-gradient(180deg,#E7B45A,#B5762E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.snap-x-row{scroll-snap-type:x mandatory;scrollbar-width:none}.snap-x-row::-webkit-scrollbar{display:none}.snap-x-row>*{scroll-snap-align:start}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

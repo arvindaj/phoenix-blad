@@ -1,0 +1,3 @@
+import Container from '@/components/ui/Container';import SectionHeading from '@/components/ui/SectionHeading';import ProductCard from '@/components/products/ProductCard';import {products} from '@/lib/data';
+export default function NewArrivals(){return(<section className="py-12"><Container><SectionHeading title="NEW ARRIVALS" sub="Fresh silhouettes. Modern fits. Phoenix attitude."/></Container>
+<ul className="snap-x-row mt-8 flex gap-4 overflow-x-auto px-4 pb-4 lg:px-[max(1rem,calc((100vw-80rem)/2+1rem))]">{products.map((p,i)=><li key={p.slug} className="shrink-0 w-56 sm:w-64"><ProductCard p={p} priority={i<2}/></li>)}</ul></section>)}

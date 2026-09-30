@@ -1,0 +1,1 @@
+export default function AnnouncementBar(){return <div className="bg-burnt text-center text-xs sm:text-sm font-semibold py-2 px-4">Wear your force · Free shipping across India · Coimbatore, Tamil Nadu</div>}

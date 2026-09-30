@@ -1,0 +1,8 @@
+import Image from 'next/image';import Container from '@/components/ui/Container';import SectionHeading from '@/components/ui/SectionHeading';import Button from '@/components/ui/Button';import {products,site} from '@/lib/data';
+const reels=[['NEW DROP','The Phoenix Shirt',0],['ONE FIT.','ONE ATTITUDE.',3],['FROM COIMBATORE','TO YOUR STYLE.',2],['HOW TO STYLE','PHOENIX BLAD',4],['THE BLACK','COLLECTION',5],["MEN'S FASHION",'LOOKBOOK',1]] as const;
+export default function InstagramReels(){return(<section className="py-16"><Container><SectionHeading title="THE PHOENIX REELS" sub="Watch the latest fits, drops and fashion moments."/>
+<ul className="snap-x-row mt-8 flex gap-4 overflow-x-auto pb-4">{reels.map(([a,b,i])=>(<li key={a+b} className="shrink-0 w-44 sm:w-56"><a href={site.ig} target="_blank" rel="noopener noreferrer" className="group relative block aspect-[9/16] overflow-hidden">
+<Image src={products[i].image} alt={`Reel preview: ${a} ${b}`} fill sizes="224px" className="object-cover transition-transform duration-500 group-hover:scale-105"/>
+<span className="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-transparent to-obsidian/30"/><span aria-hidden className="absolute top-3 right-3 w-9 h-9 rounded-full bg-obsidian/70 grid place-items-center text-phoenix opacity-0 group-hover:opacity-100 transition-opacity">▶</span>
+<span className="absolute bottom-4 left-3 right-3 font-display font-bold leading-tight">{a}<br/><span className="text-gold">{b}</span></span></a></li>))}</ul>
+<div className="mt-6"><Button href={site.ig} variant="gold" external>FOLLOW {site.handle}</Button></div></Container></section>)}

@@ -1,0 +1,5 @@
+import Link from 'next/link';import Image from 'next/image';import Container from '@/components/ui/Container';import SectionHeading from '@/components/ui/SectionHeading';import {categories} from '@/lib/data';
+export default function CategoryShowcase(){return(<section className="py-16"><Container><SectionHeading title="FOR MODERN MEN" sub="Style · Comfort · Confidence"/>
+<div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">{categories.slice(2,6).map(c=>(<Link key={c.slug} href={`/${c.slug}`} className="group relative aspect-[3/4] overflow-hidden block">
+<Image src={c.image} alt={`${c.title} at Phoenix Blad`} fill sizes="(min-width:768px) 25vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-105"/>
+<span className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent"/><span className="absolute bottom-4 left-4 font-display font-bold text-lg group-hover:text-phoenix transition-colors">{c.title.toUpperCase()}</span></Link>))}</div></Container></section>)}
